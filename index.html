@@ -4,7 +4,501 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nestify</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="left-nav">
+          <div class="logo-icon">
+            <!-- <i class="fa-solid fa-house"></i> -->
+            <img src="./icons/house-icon.png" alt="" width="23px" />
+          </div>
+          <h1>Nestify</h1>
+        </div>
+
+        <div class="right-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Tenants</a></li>
+            <li><a href="#">Owners</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <button class="btn get-started" id="get-started">Get Started</button>
+        </div>
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="left-hero">
+          <h2>Find Your Dream Home with Nestify</h2>
+          <p>
+            Welcome to Nestify, where we connect you with trusted property
+            owners and help find your perfect match.
+          </p>
+          <button class="btn get-started">Get Started</button>
+          <button class="btn btn-demo">See Demo</button>
+        </div>
+        <div class="right-hero">
+          <div class="hero-img">
+            <img src="./images/hero.png" alt="key" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trusted-section">
+      <div class="trusted-container">
+        <h3>Trusted by:</h3>
+        <div class="all-img">
+          <div class="trusted-img">
+            <img src="./images/google-logo.png" alt="google" />
+          </div>
+          <div class="trusted-img">
+            <img src="./images/youtube-logo.png" alt="youtube" />
+          </div>
+          <div class="trusted-img">
+            <img src="./images/Facebook-Logo.png" alt="facebook" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="why-section">
+      <div class="why-container">
+        <div class="left-why">
+          <div class="why-cards">
+            <div class="why-card">
+              <i> <img src="./icons/ribbon.png" alt="" /></i>
+              <div class="group">
+                <h4>Easy</h4>
+                <p>
+                  Our platform offers a hassle-free experience, allowing you to
+                  explore a wide range of properties with detailed descriptions,
+                  high-quality images, and virtual tours.
+                </p>
+              </div>
+            </div>
+            <div class="why-card">
+              <i> <img src="./icons/time.png" alt="" /></i>
+              <div class="group">
+                <h4>Unbeatable Support</h4>
+                <p>
+                  We offer competitive pricing plans for property owners, with
+                  no hidden fees or commissions.
+                </p>
+              </div>
+            </div>
+            <div class="why-card">
+              <i><img src="./icons/location.png" alt="" /></i>
+              <div class="group">
+                <h4>Competitive Pricing</h4>
+                <p>
+                  Our platform offers a hassle-free experience, allowing you to
+                  explore a wide range of properties with detailed descriptions,
+                  high-quality images, and virtual tours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-why">
+          <div class="right-content">
+            <div class="why-top">
+              <h3>Why Nestify</h3>
+              <p>
+                At Rent Ease, we redefine the way you find your perfect living
+                space. Imagine a place where your ideal home is just a click
+                away. With our user-friendly rent listing website, we curate a
+                comprehensive database of rental properties tailored to your
+                preferences.
+              </p>
+            </div>
+            <div class="why-middle">
+              <h3>1200+</h3>
+              <p>Listing from all over the world</p>
+            </div>
+            <div class="why-bottom">
+              <h3>500+</h3>
+              <p>Land Lords put their trust on us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="how-section">
+      <div class="how-container">
+        <h3>How Nestify Works For You As a Owner</h3>
+        <p>
+          Learn how our platform ease the process of listing an apartment for
+          rent
+        </p>
+        <div class="how-content">
+          <div class="how-left">
+            <div class="how-img-container">
+              <img src="./icons/location-gray.png" alt="" />
+            </div>
+            <div class="text">
+              <h4>List Your Property</h4>
+              <p>
+                Create a listing for your property, including photos, amenities,
+                and pricing
+              </p>
+            </div>
+          </div>
+          <div class="line">
+            <img src="./icons/line.png" alt="" />
+          </div>
+          <div class="how-middle">
+            <div class="how-img-container">
+              <img src="./icons/gift-gray.png" alt="" />
+            </div>
+            <div class="text">
+              <h4>List Your Property</h4>
+              <p>
+                Create a listing for your property, including photos, amenities,
+                and pricing
+              </p>
+            </div>
+          </div>
+          <div class="line"><img src="./icons/line.png" alt="" /></div>
+          <div class="how-right">
+            <div class="how-img-container">
+              <img src="./icons/key-gray.png" alt="" />
+            </div>
+            <div class="text">
+              <h4>List Your Property</h4>
+              <p>
+                Create a listing for your property, including photos, amenities,
+                and pricing
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="renting-section">
+      <div class="renting-container">
+        <div class="left-renting">
+          <h4>Renting Made Easy</h4>
+          <p id="text-rent">
+            Nestify simplifies the rental process for owners and tenants alike
+          </p>
+          <div class="renting-cards">
+            <div class="card">
+              <div class="card-img">
+                <img src="./icons/smart-home.png" alt="" />
+              </div>
+              <div class="card-text">
+                <h4>Wide Selection of Properties</h4>
+                <p>
+                  Browse through our extensive list of properties to find your
+                  dream home.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./icons/contact.png" alt="" />
+              </div>
+              <div class="card-text">
+                <h4>Easy and Secure Payments</h4>
+                <p>
+                  Make secure payments platform and enjoy a stress-free renting
+                  experience.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./icons/contact.png" alt="" />
+              </div>
+              <div class="card-text">
+                <h4>Privacy and Enjoyment</h4>
+                <p>
+                  Move in and enjoy your new home, with easy and secure rental
+                  management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-renting">
+          <div class="right-img-container">
+            <div class="right-top-section">
+              <img src="./images/tall.png" alt="" />
+            </div>
+            <div class="img-section">
+              <img src="./images/bottom.png" alt="" id="bottom-img" />
+              <img src="./images/top.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recommendation">
+      <div class="re-content">
+        <div class="re-left">
+          <h4>Recommendations</h4>
+          <p>
+            Explore our curated selection of top rated properties, tailored to
+            your preferences
+          </p>
+        </div>
+        <div class="re-right">
+          <button class="btn btn-all">All</button>
+          <button class="btn btn-sell">Sell</button>
+          <button class="btn btn-rent">Rent</button>
+        </div>
+      </div>
+    </section>
+    <section class="apartment-section">
+      <div class="apartment-container">
+        <div class="apartment-content">
+          <div class="apartment-img luxury">
+            <img src="./images/img-house.png" alt="" />
+            <button class="btn btn-popular">
+              <img src="./icons/fire.png" alt="" /> Popular
+            </button>
+          </div>
+          <div class="apartment-text">
+            <h4>Luxury 3-Bedroom House</h4>
+            <p>3 Bedroom Combined Lodge</p>
+            <p>Ibeju Lekki, Lagos</p>
+            <h4 class="apartment-price">N750K <span>/month</span></h4>
+            <div class="apartment-info">
+              <div class="img-group">
+                <section>
+                  <img src="./icons/bed.png" alt="" />
+                  <span>3 Beds</span>
+                </section>
+                <section>
+                  <img src="./icons/sleep.png" alt="" />
+                  <span>8 Sleeps</span>
+                </section>
+                <section>
+                  <img src="./icons/space.png" alt="" />
+                  <span>1,350 Sq Ft</span>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="apartment-content">
+          <div class="apartment-img listing">
+            <img src="./images/img-house1.png" alt="" />
+            <button class="btn btn-new-listing">
+              <img src="./icons/home-blue.png" alt="" style="width: 18px" />
+              <p>New Listing</p>
+            </button>
+          </div>
+          <div class="apartment-text">
+            <h4>3-Bedroom Apartment</h4>
+            <p>3 Bedroom Combined Lodge</p>
+            <p>Wuse, Abuja</p>
+            <h4 class="apartment-price">N950K <span>/month</span></h4>
+            <div class="apartment-info">
+              <div class="img-group">
+                <section>
+                  <img src="./icons/bed.png" alt="" />
+                  <span>3 Beds</span>
+                </section>
+                <section>
+                  <img src="./icons/sleep.png" alt="" />
+                  <span>6 Sleeps</span>
+                </section>
+                <section>
+                  <img src="./icons/space.png" alt="" />
+                  <span>1,350 Sq Ft</span>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="apartment-content">
+          <div class="apartment-img detatched">
+            <img src="./images/img-house2.png" alt="" />
+            <button class="btn btn-discount">
+              <img src="./icons/dollar.png" alt="" style="width: 12px" />
+              <p>Discounted price</p>
+            </button>
+          </div>
+          <div class="apartment-text">
+            <h4>4-Bedroom Detatched House</h4>
+            <p>4 Bedroom Combined Lodge</p>
+            <p>GRA, Portharcourt</p>
+            <h4 class="apartment-price">N800K <span>/month</span></h4>
+            <div class="apartment-info">
+              <div class="img-group">
+                <section>
+                  <img src="./icons/bed.png" alt="" />
+                  <span>3 Beds</span>
+                </section>
+                <section>
+                  <img src="./icons/sleep.png" alt="" />
+                  <span>8 Sleeps</span>
+                </section>
+                <section>
+                  <img src="./icons/space.png" alt="" />
+                  <span>1,350 Sq Ft</span>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonial-section">
+      <div class="testimonial-container">
+        <p class="para">TESTIMONIALS</p>
+        <h4 class="head">What Our Users Say</h4>
+        <div class="testimonial-content">
+          <div class="testimonial-cards">
+            <div class="testimonial-card">
+              <div class="img-profile">
+                <img src="./images/profile1.png" alt="" />
+              </div>
+              <div class="testimonial-top">
+                <p>
+                  Nestify has been a game changer for me. I’ve been able to find
+                  reliable tenants and manage my properties with ease.
+                </p>
+              </div>
+              <div class="hr"><hr /></div>
+              <div class="testimonial-bottom">
+                <div>
+                  <h4>Tunde Olufemi</h4>
+                  <p>Property Owner</p>
+                </div>
+                <div class="img-testimonial">
+                  <img src="./icons/star.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="img-profile">
+                <img src="./images/profile.png" alt="" />
+              </div>
+              <div class="testimonial-top">
+                <p>
+                  I was skeptical about using an online platform to find a
+                  rental, but Nestify exceeded my expectations. The process was
+                  seamless and stress-free.
+                </p>
+              </div>
+              <div class="hr"><hr /></div>
+              <div class="testimonial-bottom">
+                <div>
+                  <h4>David Kayode</h4>
+                  <p>Tenant</p>
+                </div>
+                <div class="img-testimonial">
+                  <img src="./icons/star.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame"><img src="./icons/Frame.png" alt="" /></div>
+        </div>
+      </div>
+    </section>
+    <section class="demo-section">
+      <div class="demo-container">
+        <h4>
+          Ready To See Nestify <br />
+          In Action
+        </h4>
+        <button class="btn-demo">Get a Demo &nbsp; &RightArrow;</button>
+      </div>
+    </section>
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="footer-card first">
+          <div class="footer-title">
+            <div class="footer-img">
+              <img src="./icons/blue-lne-house.png" alt="" />
+            </div>
+            <h4>Nestify</h4>
+          </div>
+          <div class="footer-title-bottom">
+            <p>Copyright © 2024 Nestify.</p>
+            <p>All rights reserved</p>
+            <div class="footer-group">
+              <div class="footer-link">
+                <img src="./icons/instagram-thumbnail.png" alt="" />
+              </div>
+              <div class="footer-link">
+                <img src="./icons/Path-thumbnail.png" alt="" />
+              </div>
+              <div class="footer-link">
+                <img src="./icons/x-thumbnail.png" alt="" />
+              </div>
+              <div class="footer-link">
+                <img src="./icons/youtube-thumbnail.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-card company">
+          <div class="links-footer">
+            <div class="link-title">
+              <h4>Company</h4>
+            </div>
+            <div class="link-text">
+              <p><a href="#">About Us</a></p>
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">Contact Us</a></p>
+              <p><a href="#">Pricing</a></p>
+              <p><a href="#">Testimonials</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-card support">
+          <div class="links-footer">
+            <div class="link-title">
+              <h4>Support</h4>
+            </div>
+            <div class="link-text">
+              <p><a href="#">Help center</a></p>
+              <p><a href="#">Terms of service</a></p>
+              <p><a href="#">Legal</a></p>
+              <p><a href="#">Privacy policy</a></p>
+              <p><a href="#">Status</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-card last">
+          <div class="links-footer">
+            <div class="link-title">
+              <h4>Stay up to date</h4>
+            </div>
+            <div class="date">
+              <h4>Your email address</h4>
+              <img src="./icons/telegram-thumbnail.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
