@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #3498db;
+  --btn-color: #ffffff;
+  --text-gray: rgba(51, 51, 51, 0.7);
+  --background: #f9f9f9;
+  --box-color: #535353;
+  --text-white: #ffffff;
+  --light-gray-border: rgba(203, 203, 203, 0.341);
+  --blue-background: #5bb0ea6e;
+  --light-red: #ffe1e1;
+  --light-blue: #d7eeff;
+  --light-green: #f1fff1;
+  --btn-hover: #51bfff;
+  --lighter-blue: #5bb0ea21;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.header-section {
+  padding: 20px 30px;
+  border: 3px solid var(--light-gray-border);
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--btn-color);
+}
+.left-nav h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  background-color: var(--lighter-blue);
+}
+.search-container input {
+  height: 40px;
+  flex: 1;
+  margin-right: 10px;
+  padding-left: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.search-icon {
+  background-color: #000000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-icon,
+.notification-icon {
+  background-color: var(--lighter-blue);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment-icon img,
+.notification-icon img {
+  width: 30px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

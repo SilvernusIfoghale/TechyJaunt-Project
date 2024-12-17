@@ -21,6 +21,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (email.value && password.value) {
     alert("Successful ✔️");
+    window.location.href = "./../client/index.html";
   } else {
     alert("Please try again ❌");
   }
