@@ -3,7 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign up</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="register.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="form-section">
+      <div class="form-container">
+        <header class="header">
+          <div class="left-nav">
+            <div class="logo-icon">
+              <!-- <i class="fa-solid fa-house"></i> -->
+              <img src="../icons/house-icon.png" alt="" width="18px" />
+            </div>
+            <h1>Nestify</h1>
+          </div>
+          <div class="hero">
+            <h3>Welcome to Nestify</h3>
+            <p>Enter your information below to continue</p>
+          </div>
+        </header>
+        <section class="form">
+          <form id="form">
+            <div class="input-container">
+              <label for="email">E-mail</label>
+              <div class="input">
+                <input type="text" placeholder="group1@gmail.com" id="email" />
+              </div>
+            </div>
+            <div class="group">
+              <div class="input-container">
+                <label for="firstname">First name</label>
+                <div class="input">
+                  <input type="text" placeholder="Group 1" id="firstname" />
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="lastname">Last name</label>
+                <div class="input">
+                  <input type="text" placeholder="TechyJaunt" id="lastname" />
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="password">Create Password</label>
+                <div class="input">
+                  <input
+                    type="password"
+                    placeholder="********"
+                    id="password"
+                    class="password"
+                  />
+                  <i class="fa-regular fa-eye-slash" id="re-password"></i>
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="input">
+                  <input
+                    type="password"
+                    placeholder="********"
+                    id="confirm-password"
+                    class="password"
+                  />
+                  <i class="fa-regular fa-eye-slash" id="re-confirm"></i>
+                </div>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn-signup">Sign Up</button>
+              <p class="text">Or Continue With</p>
+              <div class="action-group">
+                <div class="with-btn">
+                  <div class="img-container">
+                    <img src="./../icons/icons8-google.png" alt="" />
+                  </div>
+                  <p>Google</p>
+                </div>
+                <div class="with-btn">
+                  <div class="img-container">
+                    <img src="./../icons/icons8-facebook.png" alt="" />
+                  </div>
+                  <p>Facebook</p>
+                </div>
+              </div>
+              <div class="login text">
+                Already have an account? <span><a href="#">Log In </a></span>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <!-- Account Section Starts Here  -->
+    <div class="account-section">
+      <div class="account-container">
+        <header class="header">
+          <div class="left-nav">
+            <div class="logo-icon">
+              <!-- <i class="fa-solid fa-house"></i> -->
+              <img src="../icons/house-icon.png" alt="" width="18px" />
+            </div>
+            <h1>Nestify</h1>
+          </div>
+        </header>
+        <section class="hero-container">
+          <div class="hero-img">
+            <img src="./../images/object.png" alt="" />
+          </div>
+          <div class="type">
+            <h2>Account type</h2>
+            <p>Choose the account type that suits your needs.</p>
+          </div>
+        </section>
+        <section class="category-container">
+          <div class="category">
+            <div class="category-group">
+              <div class="cartegory-img">
+                <img src="./../images/frame-profile.png" alt="" width="25px" />
+              </div>
+              <div class="text-group">
+                <h3>Tenant</h3>
+                <input type="radio" name="type" id="tenant" checked />
+              </div>
+            </div>
+            <div class="category-text">
+              <p>Find a place & pay rent online</p>
+            </div>
+          </div>
+          <div class="category">
+            <div class="category-group">
+              <div class="cartegory-img">
+                <img src="./../images/frame-home.png" alt="" width="25px" />
+              </div>
+              <div class="text-group">
+                <h3>Landlord</h3>
+                <input type="radio" name="type" id="landlord" />
+              </div>
+            </div>
+            <div class="category-text">
+              <p>Accept rend online & manage rental</p>
+            </div>
+          </div>
+        </section>
+        <div class="btn-container">
+          <button class="btn-next">Next</button>
+        </div>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
 </html>
