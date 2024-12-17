@@ -28,8 +28,15 @@ toggleConfirm.addEventListener("click", () => {
     confirmPassword.setAttribute("type", "password");
   }
 });
-form.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (password.value === confirmPassword.value) {
+    alert("Sign Up Successful ✔️");
+    window.location.href = "./../login/login.html";
+  } else {
+    alert("Password do not match ❌");
+  }
+  console.log(accountType);
 });
 
 //===================================
@@ -47,6 +54,5 @@ next.addEventListener("click", () => {
   }
   console.log(accountType);
   account.classList.add("hidden");
-
   formsection.classList.add("visible");
 });

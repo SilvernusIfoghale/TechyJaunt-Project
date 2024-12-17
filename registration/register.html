@@ -44,20 +44,35 @@
             <div class="input-container">
               <label for="email">E-mail</label>
               <div class="input">
-                <input type="text" placeholder="group1@gmail.com" id="email" />
+                <input
+                  type="text"
+                  placeholder="group1@gmail.com"
+                  id="email"
+                  required
+                />
               </div>
             </div>
             <div class="group">
               <div class="input-container">
                 <label for="firstname">First name</label>
                 <div class="input">
-                  <input type="text" placeholder="Group 1" id="firstname" />
+                  <input
+                    type="text"
+                    placeholder="Group 1"
+                    id="firstname"
+                    required
+                  />
                 </div>
               </div>
               <div class="input-container">
                 <label for="lastname">Last name</label>
                 <div class="input">
-                  <input type="text" placeholder="TechyJaunt" id="lastname" />
+                  <input
+                    type="text"
+                    placeholder="TechyJaunt"
+                    id="lastname"
+                    required
+                  />
                 </div>
               </div>
               <div class="input-container">
@@ -68,6 +83,7 @@
                     placeholder="********"
                     id="password"
                     class="password"
+                    required
                   />
                   <i class="fa-regular fa-eye-slash" id="re-password"></i>
                 </div>
@@ -80,13 +96,14 @@
                     placeholder="********"
                     id="confirm-password"
                     class="password"
+                    required
                   />
                   <i class="fa-regular fa-eye-slash" id="re-confirm"></i>
                 </div>
               </div>
             </div>
             <div class="action">
-              <button class="btn-signup">Sign Up</button>
+              <button class="btn-signup" type="submit">Sign Up</button>
               <p class="text">Or Continue With</p>
               <div class="action-group">
                 <div class="with-btn">
@@ -103,7 +120,8 @@
                 </div>
               </div>
               <div class="login text">
-                Already have an account? <span><a href="#">Log In </a></span>
+                Already have an account?
+                <span><a href="./../login/login.html">Log In </a></span>
               </div>
             </div>
           </form>
