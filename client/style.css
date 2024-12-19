@@ -140,6 +140,7 @@ body {
   align-items: center;
   gap: 10px;
   transition: all 0.7s ease-in-out;
+  cursor: pointer;
 }
 .panel-group .active {
   color: #000000;
