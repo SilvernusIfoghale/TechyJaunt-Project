@@ -17,6 +17,9 @@
   --light-blue: #d7eeff;
   --light-green: #f1fff1;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Poppins", sans-serif;

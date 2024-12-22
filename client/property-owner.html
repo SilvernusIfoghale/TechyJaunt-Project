@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nestify</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="property-owner.css" />
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="header-container">
+        <header class="header">
+          <div class="left-nav">
+            <div class="logo-icon">
+              <!-- <i class="fa-solid fa-house"></i> -->
+              <img src="../icons/house-icon.png" alt="" width="18px" />
+            </div>
+            <h1>Nestify</h1>
+          </div>
+          <div class="right-nav">
+            <div class="search-container">
+              <input type="text" placeholder="Search Location" />
+              <div class="search-icon-container">
+                <div class="search-icon">
+                  <img src="./icons/Camera.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="comments-container">
+              <div class="comment-icon">
+                <img src=".//icons/message.png" alt="" />
+              </div>
+            </div>
+            <div class="notification-container">
+              <div class="notification-icon">
+                <img src="./icons/Notification.png" alt="" />
+              </div>
+            </div>
+            <div class="profile-container">
+              <div class="profile-icon">
+                <img src="./icons/Frame-icon.png" alt="" />
+              </div>
+              <p>Group 1</p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <!-- panel section  -->
+    <div class="main">
+      <div class="panel-container">
+        <div class="panel-content">
+          <div
+            class="panel-group"
+            onclick="window.location.href='./index.html'"
+          >
+            <div class="panel-img">
+              <img src="./icons/ViewGridOutline.png" alt="" />
+            </div>
+            <h4>Dashboard</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/OfficeBuilding.png" alt="" />
+            </div>
+            <h4 class="active">Properties</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/carbon_book.png" alt="" />
+            </div>
+            <h4>Bookings</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/fi_3524636.png" alt="" />
+            </div>
+            <h4>Settings</h4>
+          </div>
+        </div>
+
+        <div class="panel-content switch">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/SwitchHorizontalOutline.png" alt="" />
+            </div>
+            <h4>Switch</h4>
+          </div>
+        </div>
+      </div>
+      <div class="main-section">
+        <section class="apartment-section">
+          <div class="left">
+            <div class="img-container">
+              <img src="./images/img-profile.png" alt="" class="img-main" />
+            </div>
+          </div>
+          <div class="right">
+            <h2>Owner Information</h2>
+
+            <p class="text-bold text-gap">
+              Name : &nbsp; &nbsp; Tunde Olufemi <br />
+              Email : &nbsp; &nbsp; tundeolufemi@gmail.com <br />
+              Phone Number : &nbsp; &nbsp; +234 09000000000
+            </p>
+            <h2>Property Information</h2>
+
+            <p class="text-bold">
+              Property Location : &nbsp; &nbsp; Plot 113 Jayjay Oladimeji Close,
+              Lekki Phase 1, Lekki Close. <br />
+              <br />
+              Property Type : &nbsp; &nbsp; Apartment, House
+            </p>
+            <div class="btn-group">
+              <button class="btn-apply">Apply For Rent</button>
+              <button class="btn-view">Schedule View</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>

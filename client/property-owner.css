@@ -167,7 +167,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   margin: 50px 0;
 }
 
@@ -181,44 +181,34 @@ body {
   object-fit: contain;
 }
 
-.thumbnails {
-  display: flex;
-  gap: 10px;
-  max-width: 700px;
-  min-width: 350px;
-
-  justify-content: space-between;
-  margin-top: 15px;
-}
-
-.imgs {
-  max-width: 200px;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.imgs img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
 .right {
-  max-width: 40%;
-  color: var(--box-color);
+  max-width: 80%;
+}
+.right h2 {
+  margin-right: 20px;
+  padding: 10px 0;
+  border-bottom: 3px solid var(--light-gray-border);
 }
 .right p {
   padding-bottom: 30px;
-  padding-top: 5px;
+  padding: 15px 0;
   margin-right: 30px;
+  color: var(--box-color);
+}
+.text-gap {
+  line-height: 2.9rem;
+}
+.text-bold {
+  font-weight: 600;
+}
+.btn-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
 }
 
-ul {
-  margin-left: 30px;
-}
-
-.btn-contact {
-  width: 70%;
+.btn-apply {
+  width: 40%;
   background-color: var(--primary-color);
   height: 40px;
   border-radius: 25px;
@@ -228,7 +218,25 @@ ul {
   margin: 10px 0;
   min-width: 150px;
 }
-.btn-contact:hover {
+.btn-apply:hover {
   background-color: var(--btn-hover);
+  cursor: pointer;
+}
+
+.btn-view {
+  width: 40%;
+  border: 2px solid var(--btn-hover);
+  height: 40px;
+  border-radius: 25px;
+  color: var(--btn-hover);
+  font-weight: bold;
+  margin: 10px 0;
+  min-width: 150px;
+  background: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-view:hover {
+  transform: scale(105%);
   cursor: pointer;
 }

@@ -6,3 +6,9 @@ thumbnails.forEach((thumbnail) => {
     imgMain.setAttribute("src", thumbnail.src);
   });
 });
+
+const contact = document.querySelector(".btn-contact");
+
+contact.addEventListener("click", () => {
+  window.location.href = "./property-owner.html";
+});
