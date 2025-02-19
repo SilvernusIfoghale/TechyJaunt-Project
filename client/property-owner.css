@@ -20,6 +20,7 @@
   --lighter-blue: #5bb0ea21;
   --brown: #3d3b3bbd;
   --light-brown: #3d3b3bbd;
+  --faded-light-brown: #d9d9d9;
   --very-light-brown: #201c1c9e;
 }
 body {
@@ -239,4 +240,87 @@ body {
 .btn-view:hover {
   transform: scale(105%);
   cursor: pointer;
+}
+
+/* modal  */
+
+.modal {
+  background: white;
+  box-shadow: 1px 1px 10px rgba(203, 203, 203, 0.341);
+  height: 760px;
+  width: 400px;
+  padding: 20px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 10;
+  display: none;
+}
+.modal-container form {
+  padding: 0 10px;
+}
+
+.modal-para {
+  padding: 20px 0;
+}
+.modal-container input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  padding-left: 20px;
+  border-radius: 20px;
+  margin: 7px 0;
+}
+.employment {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.employment p {
+  background-color: var(--faded-light-brown);
+  width: 170px;
+  padding: 5px;
+}
+.employment-status {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.rent-apply {
+  text-align: center;
+}
+.btn-apply-for-rent {
+  width: 70%;
+  background-color: var(--primary-color);
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.75rem;
+  color: var(--text-white);
+  margin: 10px 0;
+  min-width: 150px;
+}
+.dark {
+  display: none;
+}
+.select-options {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  margin: 7px 0;
+  font-size: 0.75rem;
+}
+.dark-background {
+  position: absolute;
+  width: 100%;
+  min-height: 110vh;
+  /* opacity: 10%; */
+  background-color: rgba(77, 76, 76, 0.7);
+}
+.visible {
+  display: block;
 }

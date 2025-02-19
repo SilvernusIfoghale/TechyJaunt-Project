@@ -23,7 +23,101 @@
     />
     <link rel="stylesheet" href="property-owner.css" />
   </head>
-  <body>
+  <body id="body">
+    <!-- modal -->
+    <div class="dark"></div>
+    <section class="modal">
+      <div class="modal-container">
+        <p class="modal-para">
+          Kindly fill the required information to send a request to the property
+          owner for review
+        </p>
+        <form>
+          <div>
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="John Doe" />
+          </div>
+          <div>
+            <label for="gender"></label>
+            <input type="text" id="gender" placeholder="Male" />
+          </div>
+          <div>
+            <label for="dob"></label>
+            <input type="text" id="dob" placeholder="dd-mm-yyyy" />
+          </div>
+          <div>
+            <label for="phoneNumber"></label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              placeholder="+234 703 493 3939"
+            />
+          </div>
+          <div>
+            <label for="email"></label>
+            <input
+              type="email"
+              id="email"
+              placeholder="johndoe@yahoo.com"
+              required
+            />
+          </div>
+          <br />
+          <div class="employment">
+            <p>Employment Status</p>
+          </div>
+          <div class="employment-status">
+            <div>
+              <input type="radio" name="status" id="employed" checked />
+              <label for="employed">Employed</label>
+            </div>
+            <div>
+              <input type="radio" name="status" id="un-employed" />
+              <label for="un-employed">unemployed</label>
+            </div>
+            <div>
+              <input type="radio" name="status" id="others" />
+              <label for="employed">Others</label>
+            </div>
+          </div>
+          <div>
+            <label for="others">If others, please specify</label>
+            <input type="text" id="others-specify" />
+          </div>
+          <div>
+            <label for="marital-status">Marital status</label>
+            <select
+              name="maritalStatus"
+              id="marital-status"
+              class="select-options"
+            >
+              <option value="single">Single</option>
+              <option value="single">Married</option>
+              <option value="single">Divorced</option>
+              <option value="single">Widowed</option>
+            </select>
+          </div>
+          <div>
+            <label for="marital-status">Financial status</label>
+            <select
+              name="financialStatus"
+              id="financial-status"
+              class="select-options"
+            >
+              <option value="monthly-income">Monthly income</option>
+              <option value="daily-income">Daily income</option>
+              <option value="weekly-income">Weekly income</option>
+              <option value="annual-income">Annual income</option>
+            </select>
+          </div>
+          <div class="rent-apply">
+            <button class="btn-apply-for-rent" id="checkout">
+              Apply for rent
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
     <div class="header-section">
       <div class="header-container">
         <header class="header">
@@ -142,6 +236,31 @@
         </section>
       </div>
     </div>
-    <script></script>
+    <script src="properties-owner.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      const stripe = Stripe(
+        "pk_test_51Px5w6Lpl3mbAXgN50yaRf5LkQuesPsiOWcfWYFI0BUsyM8TjwD8V3yurGx4iio2Y53qJzgTF9Yji6gPSbVo9lFW004URe1AmJ"
+      );
+      document.getElementById("checkout").addEventListener("click", () => {
+        stripe
+          .redirectToCheckout({
+            lineItems: [
+              {
+                // price: "price_1QuBpcLpl3mbAXgNx0kYDETw",
+                price: "price_1QuCbvLpl3mbAXgNzdGhRzOk",
+                quantity: 1,
+              },
+            ],
+            mode: "payment",
+            successUrl:
+              "https://nestify-one.vercel.app/client/property-owner.html",
+            cancelUrl: "https://nestify-one.vercel.app/",
+          })
+          .then((result) => {
+            alert(result);
+          });
+      });
+    </script>
   </body>
 </html>
