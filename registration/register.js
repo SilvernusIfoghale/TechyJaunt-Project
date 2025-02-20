@@ -9,6 +9,7 @@ const togglePassword = document.querySelector("#re-password");
 const toggleConfirm = document.querySelector("#re-confirm");
 
 let accountType = "tenant";
+localStorage.setItem("accountType", accountType);
 
 togglePassword.addEventListener("click", () => {
   if (togglePassword.classList.contains("fa-eye-slash")) {
@@ -36,7 +37,7 @@ form.addEventListener("submit", (e) => {
   } else {
     alert("Password do not match ❌");
   }
-  console.log(accountType);
+  // console.log(accountType);
 });
 
 //===================================
@@ -49,10 +50,14 @@ const formsection = document.querySelector(".form-section");
 next.addEventListener("click", () => {
   if (landlord.checked) {
     accountType = "landlord";
+    localStorage.setItem("accountType", accountType);
   } else {
     accountType = "tenant";
+    localStorage.setItem("accountType", accountType);
   }
-  console.log(accountType);
+  const savedAccountType = localStorage.getItem("accountType");
+  // console.log(accountType);
+  // console.log(savedAccountType);
   account.classList.add("hidden");
   formsection.classList.add("visible");
 });

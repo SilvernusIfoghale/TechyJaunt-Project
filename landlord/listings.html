@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nestify</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="listings.css" />
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="header-container">
+        <header class="header">
+          <div class="left-nav">
+            <div class="logo-icon">
+              <!-- <i class="fa-solid fa-house"></i> -->
+              <img src="../icons/house-icon.png" alt="" width="18px" />
+            </div>
+            <h1>Nestify</h1>
+          </div>
+          <div class="right-nav">
+            <div class="search-container">
+              <input type="text" placeholder="Search Location" />
+              <div class="search-icon-container">
+                <div class="search-icon">
+                  <img src="./icons/search.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="comments-container">
+              <div class="comment-icon">
+                <img src=".//icons/message.png" alt="" />
+              </div>
+            </div>
+            <div class="notification-container">
+              <div class="notification-icon">
+                <img src="./icons/Notification.png" alt="" />
+              </div>
+            </div>
+            <div class="profile-container">
+              <div class="profile-icon">
+                <img src="./icons/Frame-icon.png" alt="" />
+              </div>
+              <p>Group 1</p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <!-- panel section  -->
+    <div class="main">
+      <div class="panel-container">
+        <div class="panel-content">
+          <div
+            class="panel-group"
+            onclick="window.location.href='./index.html'"
+          >
+            <div class="panel-img">
+              <img src="./icons/ViewGridOutline.png" alt="" />
+            </div>
+            <h4>Dashboard</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div
+            class="panel-group"
+            onclick="window.location.href='./listings.html'"
+          >
+            <div class="panel-img">
+              <img src="./icons/OfficeBuilding.png" alt="" />
+            </div>
+            <h4 class="active">Listings</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/carbon_book.png" alt="" />
+            </div>
+            <h4>Requests</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/fi_3524636.png" alt="" />
+            </div>
+            <h4>Settings</h4>
+          </div>
+        </div>
+
+        <div class="panel-content switch">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/SwitchHorizontalOutline.png" alt="" />
+            </div>
+            <h4>Switch</h4>
+          </div>
+        </div>
+      </div>
+      <div class="main-section">
+        <!-- first form  -->
+        <div class="property-detail">
+          <form>
+            <div class="group-item">
+              <label for="type">Type</label>
+              <select name="type" id="type">
+                <option value="" selected disabled></option>
+                <option value="Flat">Flat</option>
+                <option value="Flat">2-Bedroom House</option>
+                <option value="Flat">3-Bedroom House</option>
+                <option value="Flat">4-Bedroom Detached House</option>
+              </select>
+            </div>
+            <div class="group-item">
+              <label for="propertyname">Name of property</label>
+              <input type="text" placeholder="Enter property name" />
+            </div>
+            <div class="group-item">
+              <label for="decription">Description</label>
+              <textarea
+                class="description"
+                placeholder="Write about property"
+              ></textarea>
+            </div>
+            <div class="wrapper-upload">
+              <div><img src="./icons/image-up.svg" alt="avatar-icon" /></div>
+              <div><p class="text">Drop your files here</p></div>
+              <div class="file-upload">
+                <label for="file-input" class="file-upload-label">
+                  <span class="file-upload-text">Choose a file</span>
+                </label>
+                <input type="file" id="file-input" class="file-input" />
+              </div>
+            </div>
+            <div>
+              <p class="text">You can add upto 10 images</p>
+              <div class="image-area">
+                <!-- image area  -->
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- second form  -->
+        <div class="properties-form">
+          <form>
+            <div class="group-item">
+              <label for="country">Country</label>
+              <input type="text" placeholder="Enter property country" />
+            </div>
+            <div class="group-item">
+              <label for="State">State</label>
+              <input type="text" placeholder="Enter property state" />
+            </div>
+            <div class="group-item">
+              <label for="city">City</label>
+              <input type="text" placeholder="Enter property city" />
+            </div>
+            <div class="group-item">
+              <label for="zipcode">Zip code</label>
+              <input type="text" placeholder="Enter property zip code" />
+            </div>
+
+            <div class="group-item">
+              <label for="address">Address</label>
+              <textarea
+                class="address"
+                placeholder="Enter property address"
+              ></textarea>
+            </div>
+            <div class="btn-container">
+              <button class="add-property">Add Property</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

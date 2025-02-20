@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nestify</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="header-container">
+        <header class="header">
+          <div class="left-nav">
+            <div class="logo-icon">
+              <!-- <i class="fa-solid fa-house"></i> -->
+              <img src="../icons/house-icon.png" alt="" width="18px" />
+            </div>
+            <h1>Nestify</h1>
+          </div>
+          <div class="right-nav">
+            <div class="search-container">
+              <p>Add Property</p>
+              <div class="search-icon-container">
+                <div class="search-icon">
+                  <img src="./icons/Vector.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="comments-container">
+              <div class="comment-icon">
+                <img src=".//icons/message.png" alt="" />
+              </div>
+            </div>
+            <div class="notification-container">
+              <div class="notification-icon">
+                <img src="./icons/Notification.png" alt="" />
+              </div>
+            </div>
+            <div class="profile-container">
+              <div class="profile-icon">
+                <img src="./icons/Frame-icon.png" alt="" />
+              </div>
+              <p>Group 1</p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <!-- panel section  -->
+    <div class="main">
+      <div class="panel-container">
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/Dashboard.png" alt="" />
+            </div>
+            <h4 class="active">Dashboard</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div
+            class="panel-group"
+            onclick="window.location.href='./listings.html'"
+          >
+            <div class="panel-img">
+              <img src="./icons/OfficeBuildingOutline.png" alt="" />
+            </div>
+            <h4>Listings</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/carbon_book.png" alt="" />
+            </div>
+            <h4>Requests</h4>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/fi_3524636.png" alt="" />
+            </div>
+            <h4>Settings</h4>
+          </div>
+        </div>
+
+        <div class="panel-content switch">
+          <div class="panel-group">
+            <div class="panel-img">
+              <img src="./icons/SwitchHorizontalOutline.png" alt="" />
+            </div>
+            <h4>Switch</h4>
+          </div>
+        </div>
+      </div>
+      <div class="main-section">
+        <div>
+          <div class="upload-container">
+            <div class="upload-img">
+              <img src="./icons/ooui_notice.png" alt="caution" />
+            </div>
+            <div>
+              <p>
+                Compliance update: All Property owners are required to submit a
+                valid means of identification for verification purposes
+              </p>
+            </div>
+            <div>
+              <button class="upload-btn">Upload Documents</button>
+            </div>
+          </div>
+          <!-- rental list section  -->
+          <div class="rental-section">
+            <div class="title">
+              <h4>Rental List</h4>
+              <button class="add-tenant">Add Tenant</button>
+            </div>
+            <div class="table">
+              <table>
+                <thead id="thead">
+                  <tr>
+                    <th>Name</th>
+                    <th>Tenant</th>
+                    <th>Gender</th>
+                    <th>Male</th>
+                    <th>Action</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                  <tr>
+                    <td>Flat</td>
+                    <td>
+                      <div class="user-container">
+                        <div class="user-img">
+                          <img src="./icons/user.png" alt="" />
+                        </div>
+                        <p>David Micheal</p>
+                      </div>
+                    </td>
+                    <td>Male</td>
+                    <td>Yearly</td>
+                    <td class="action-section">
+                      <div><img src="./icons/edit.png" alt="" /></div>
+                      <div><img src="./icons/avatar.svg" alt="" /></div>
+                      <div><img src="./icons/delete.png" alt="" /></div>
+                    </td>
+
+                    <td class="action">Active</td>
+                  </tr>
+                </tbody>
+                <tbody id="tbody">
+                  <tr>
+                    <td>Flat</td>
+                    <td>
+                      <div class="user-container">
+                        <div class="user-img">
+                          <img src="./icons/user2.png" alt="" />
+                        </div>
+                        <p>Bello Abdullah</p>
+                      </div>
+                    </td>
+                    <td>Male</td>
+                    <td>Yearly</td>
+                    <td class="action-section">
+                      <div><img src="./icons/edit.png" alt="" /></div>
+                      <div><img src="./icons/avatar.svg" alt="" /></div>
+                      <div><img src="./icons/delete.png" alt="" /></div>
+                    </td>
+
+                    <td class="action inactive">Inactive</td>
+                  </tr>
+                </tbody>
+                <tbody id="tbody">
+                  <tr>
+                    <td>Flat</td>
+                    <td>
+                      <div class="user-container">
+                        <div class="user-img">
+                          <img src="./icons/user1.png" alt="" />
+                        </div>
+                        <p>Eze Chibuzor</p>
+                      </div>
+                    </td>
+                    <td>Male</td>
+                    <td>Yearly</td>
+                    <td class="action-section">
+                      <div><img src="./icons/edit.png" alt="" /></div>
+                      <div><img src="./icons/avatar.svg" alt="" /></div>
+                      <div><img src="./icons/delete.png" alt="" /></div>
+                    </td>
+
+                    <td class="action">Active</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
