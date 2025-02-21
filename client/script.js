@@ -1,32 +1,50 @@
-document
-  .getElementById("loginForm")
-  .addEventListener("submit", async (event) => {
-    event.preventDefault();
+const user = localStorage.getItem("user");
+const userData = JSON.parse(user);
+console.log(userData);
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+// document
+//   .getElementById("loginForm")
+//   .addEventListener("submit", async (event) => {
+//     event.preventDefault();
 
-    try {
-      const response = await fetch(
-        "https://techyjaunt-final-project-1.onrender.com/user/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ username, password }),
-        }
-      );
+//     const username = document.getElementById("username").value;
+//     const password = document.getElementById("password").value;
 
-      const data = await response.json();
-      if (response.ok) {
-        alert(data.message); // Handle successful login
-        // Redirect or perform other actions
-      } else {
-        alert(data.message); // Handle error
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again.");
-    }
-  });
+//     try {
+//       const response = await fetch(
+//         "https://techyjaunt-final-project-1.onrender.com/user/login",
+//         {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify({ username, password }),
+//         }
+//       );
+
+//       const data = await response.json();
+//       if (response.ok) {
+//         alert(data.message); // Handle successful login
+//         // Redirect or perform other actions
+//       } else {
+//         alert(data.message); // Handle error
+//       }
+//     } catch (error) {
+//       console.error("Error:", error);
+//       alert("An error occurred. Please try again.");
+//     }
+//   });
+
+function updateUserProfile(userData) {
+  const userName = userData?.displayName;
+  const userEmail = userData?.email;
+  const userProfilePicture = userData?.photoURL;
+  console.log(userProfilePicture);
+
+  document.getElementById("userName").textContent = userName;
+  if (userProfilePicture) {
+    document.getElementById("userProfilePicture").src = userProfilePicture;
+  }
+}
+
+updateUserProfile(userData);

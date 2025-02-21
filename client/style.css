@@ -360,3 +360,14 @@ body {
 #see {
   cursor: pointer;
 }
+
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile-icon img {
+  width: 100%;
+  object-fit: contain;
+}
