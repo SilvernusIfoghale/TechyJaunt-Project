@@ -8,9 +8,6 @@ const btnSignup = document.querySelector("#btn-signup");
 const togglePassword = document.querySelector("#re-password");
 const toggleConfirm = document.querySelector("#re-confirm");
 
-let accountType = "tenant";
-localStorage.setItem("accountType", accountType);
-
 togglePassword.addEventListener("click", () => {
   if (togglePassword.classList.contains("fa-eye-slash")) {
     togglePassword.classList.replace("fa-eye-slash", "fa-eye");
@@ -47,15 +44,18 @@ const next = document.querySelector(".btn-next");
 const account = document.querySelector(".account-section");
 const formsection = document.querySelector(".form-section");
 
+// console.log(landlord.checked);
+// console.log(tenant.checked);
+
 next.addEventListener("click", () => {
   if (landlord.checked) {
     accountType = "landlord";
     localStorage.setItem("accountType", accountType);
-  } else {
+  } else if (tenant.checked) {
     accountType = "tenant";
     localStorage.setItem("accountType", accountType);
   }
-  const savedAccountType = localStorage.getItem("accountType");
+  // const savedAccountType = localStorage.getItem("accountType");
   // console.log(accountType);
   // console.log(savedAccountType);
   account.classList.add("hidden");

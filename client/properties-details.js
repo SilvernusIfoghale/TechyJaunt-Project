@@ -13,57 +13,52 @@ contact.addEventListener("click", () => {
   window.location.href = "./property-owner.html";
 });
 
-const user = localStorage.getItem("user");
-const userData = JSON.parse(user);
-console.log(userData);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
 
-// document
-//   .getElementById("loginForm")
-//   .addEventListener("submit", async (event) => {
-//     event.preventDefault();
+const firebaseConfig = {
+  apiKey: "AIzaSyBazHNvBbgW1pVf00R2QcUBocECxA9d15o",
+  authDomain: "nestify-e5ad9.firebaseapp.com",
+  projectId: "nestify-e5ad9",
+  storageBucket: "nestify-e5ad9.firebasestorage.app",
+  messagingSenderId: "581222877627",
+  appId: "1:581222877627:web:241241b6ac572f0b2f1c9e",
+};
 
-//     const username = document.getElementById("username").value;
-//     const password = document.getElementById("password").value;
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-//     try {
-//       const response = await fetch(
-//         "https://techyjaunt-final-project-1.onrender.com/user/login",
-//         {
-//           method: "POST",
-//           headers: {
-//             "Content-Type": "application/json",
-//           },
-//           body: JSON.stringify({ username, password }),
-//         }
-//       );
+const auth = getAuth(app);
 
-//       const data = await response.json();
-//       if (response.ok) {
-//         alert(data.message); // Handle successful login
-//
-//       } else {
-//         alert(data.message); // Handle error
-//       }
-//     } catch (error) {
-//       console.error("Error:", error);
-//       alert("An error occurred. Please try again.");
-//     }
-//   });
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+    const userName = user?.displayName;
+    const userEmail = user?.email;
+    const userProfilePicture = user?.photoURL;
+    console.log(userProfilePicture);
 
-function updateUserProfile(userData) {
-  const userName = userData?.displayName;
-  const userEmail = userData?.email;
-  const userProfilePicture = userData?.photoURL;
-  console.log(userProfilePicture);
-
-  document.getElementById("userName").textContent = userName;
-  if (userProfilePicture) {
-    document.getElementById("userProfilePicture").src = userProfilePicture;
+    document.getElementById("userName").textContent = userName;
+    if (userProfilePicture) {
+      document.getElementById("userProfilePicture").src = userProfilePicture;
+    }
+  } else {
+    window.location.href = "./../index.html";
   }
-}
+});
 
-updateUserProfile(userData);
+// sign out
+
 document.querySelector(".btn-logout").addEventListener("click", () => {
-  localStorage.clear();
-  window.location.href = "./../index.html";
+  signOut(auth)
+    .then(() => {
+      window.location.href = "./../index.html";
+    })
+    .catch((error) => {
+      console.log("Error", error.message);
+    });
 });

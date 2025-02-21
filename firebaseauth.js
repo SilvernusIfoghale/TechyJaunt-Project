@@ -25,16 +25,19 @@ const providerFacebook = new FacebookAuthProvider();
 auth.languageCode = "en";
 
 const btnGoogle = document.querySelector(".google-sign-in");
-const savedAccountType = localStorage.getItem("accountType");
 
 btnGoogle.addEventListener("click", () => {
+  const savedAccountType = localStorage.getItem("accountType");
+  console.log(savedAccountType);
   signInWithPopup(auth, provider)
     .then((result) => {
+      const user = result.user;
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
-      const user = JSON.stringify(result.user);
-      localStorage.setItem("user", user);
-      console.log(user);
+      // const user = JSON.stringify(result.user);
+      // localStorage.setItem("user", user);
+      // console.log(user);
+
       if (savedAccountType == "tenant") {
         console.log(user);
         window.location.href = "./../client/index.html";
@@ -56,13 +59,16 @@ const btnFacebook = document.querySelector(".facebook-sign-in");
 btnFacebook.addEventListener("click", () => {
   signInWithPopup(auth, providerFacebook)
     .then((result) => {
+      const user = result.user;
       const credential = FacebookAuthProvider.credentialFromResult(result);
       const accessToken = credential.accessToken;
-      const user = JSON.stringify(result.user);
-      localStorage.setItem("user", user);
-      console.log(user);
+      // const user = JSON.stringify(result.user);
+      // localStorage.setItem("user", user);
+      // console.log(user);
+      const savedAccountType = localStorage.getItem("accountType");
+      console.log(savedAccountType);
       if (savedAccountType == "tenant") {
-        console.log(user);
+        // console.log(user);
         window.location.href = "./../client/index.html";
       } else {
         window.location.href = "./../landlord/index.html";
@@ -76,14 +82,3 @@ btnFacebook.addEventListener("click", () => {
       console.log(errorMessage);
     });
 });
-
-// sign out
-
-// import { getAuth, signOut } from "firebase/auth";
-
-// const auth = getAuth();
-// signOut(auth).then(() => {
-//   // Sign-out successful.
-// }).catch((error) => {
-//   // An error happened.
-// });
