@@ -3,6 +3,7 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
+  FacebookAuthProvider,
 } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -20,10 +21,12 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 const provider = new GoogleAuthProvider();
+const providerFacebook = new FacebookAuthProvider();
 auth.languageCode = "en";
 
 const btnGoogle = document.querySelector(".google-sign-in");
 const savedAccountType = localStorage.getItem("accountType");
+
 btnGoogle.addEventListener("click", () => {
   signInWithPopup(auth, provider)
     .then((result) => {
@@ -44,6 +47,32 @@ btnGoogle.addEventListener("click", () => {
       const errorMessage = error.message;
       const email = error.customData.email;
       const credential = GoogleAuthProvider.credentialFromError(error);
+      console.log(errorMessage);
+    });
+});
+//facebook
+
+const btnFacebook = document.querySelector(".facebook-sign-in");
+btnFacebook.addEventListener("click", () => {
+  signInWithPopup(auth, providerFacebook)
+    .then((result) => {
+      const credential = FacebookAuthProvider.credentialFromResult(result);
+      const accessToken = credential.accessToken;
+      const user = JSON.stringify(result.user);
+      localStorage.setItem("user", user);
+      console.log(user);
+      if (savedAccountType == "tenant") {
+        console.log(user);
+        window.location.href = "./../client/index.html";
+      } else {
+        window.location.href = "./../landlord/index.html";
+      }
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.customData.email;
+      const credential = FacebookAuthProvider.credentialFromError(error);
       console.log(errorMessage);
     });
 });

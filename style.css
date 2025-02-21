@@ -25,6 +25,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   background-color: var(--background);
+  overflow-x: hidden;
 }
 /* header section starts here  */
 

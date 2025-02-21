@@ -121,7 +121,10 @@
     <div class="header-section">
       <div class="header-container">
         <header class="header">
-          <div class="left-nav">
+          <div
+            class="left-nav"
+            onclick="window.location.href='./../index.html'"
+          >
             <div class="logo-icon">
               <!-- <i class="fa-solid fa-house"></i> -->
               <img src="../icons/house-icon.png" alt="" width="18px" />
@@ -149,10 +152,15 @@
             </div>
             <div class="profile-container">
               <div class="profile-icon">
-                <img src="./icons/Frame-icon.png" alt="" />
+                <img
+                  src="./icons/Frame-icon.png"
+                  alt=""
+                  id="userProfilePicture"
+                />
               </div>
-              <p>Group 1</p>
+              <p id="userName"></p>
             </div>
+            <button class="btn-logout">Log out</button>
           </div>
         </header>
       </div>
@@ -196,7 +204,10 @@
           </div>
         </div>
 
-        <div class="panel-content switch">
+        <div
+          class="panel-content switch"
+          onclick="window.location.href='./../registration/register.html'"
+        >
           <div class="panel-group">
             <div class="panel-img">
               <img src="./icons/SwitchHorizontalOutline.png" alt="" />
@@ -230,7 +241,36 @@
             </p>
             <div class="btn-group">
               <button class="btn-apply">Apply For Rent</button>
-              <button class="btn-view">Schedule View</button>
+              <button class="btn-view">
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <link
+                  href="https://calendar.google.com/calendar/scheduling-button-script.css"
+                  rel="stylesheet"
+                />
+                <script
+                  src="https://calendar.google.com/calendar/scheduling-button-script.js"
+                  async
+                ></script>
+                <script>
+                  (function () {
+                    var target = document.currentScript;
+                    window.addEventListener("load", function () {
+                      calendar.schedulingButton.load({
+                        url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10lgStZQ1hvLx9tXsHrpkOYHKtU6076YZNVjkhIy06kmI6FCfnPYF79Hp2U0Y8vv054frXuDNI?gv=true",
+                        color: "#ffffff",
+                        label: "Schedule View",
+                        target,
+                      });
+                    });
+                  })();
+                </script>
+                <!-- end Google Calendar Appointment Scheduling -->
+              </button>
+              <div class="meeting">
+                <!-- Google Calendar Appointment Scheduling begin -->
+
+                <!-- end Google Calendar Appointment Scheduling -->
+              </div>
             </div>
           </div>
         </section>

@@ -42,6 +42,11 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: all ease-in-out 1s;
+}
+.left-nav:hover {
+  cursor: pointer;
+  transform: scale(105%);
 }
 
 .logo-icon {
@@ -308,4 +313,28 @@ body {
   font-size: 0.7rem;
   color: white;
   background-color: var(--primary-color);
+}
+
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile-icon img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.btn-logout {
+  background-color: var(--primary-color);
+  cursor: pointer;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+.btn-logout:hover {
+  background-color: var(--btn-hover);
 }

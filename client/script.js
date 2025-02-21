@@ -25,7 +25,7 @@ console.log(userData);
 //       const data = await response.json();
 //       if (response.ok) {
 //         alert(data.message); // Handle successful login
-//         // Redirect or perform other actions
+
 //       } else {
 //         alert(data.message); // Handle error
 //       }
@@ -48,3 +48,8 @@ function updateUserProfile(userData) {
 }
 
 updateUserProfile(userData);
+
+document.querySelector(".btn-logout").addEventListener("click", () => {
+  localStorage.clear();
+  window.location.href = "./../index.html";
+});
