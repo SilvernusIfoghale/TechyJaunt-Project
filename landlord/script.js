@@ -77,7 +77,7 @@ onAuthStateChanged(auth, (user) => {
           console.log(userData);
           document.getElementById("userName").textContent = userData.firstName;
         } else {
-          alert("No document found matching id");
+          console.log("No document found matching id");
         }
       })
       .catch((error) => {

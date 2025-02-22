@@ -32,6 +32,7 @@ btnGoogle.addEventListener("click", () => {
   signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
+      localStorage.setItem("loggedInUserId", user.uid);
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       // const user = JSON.stringify(result.user);
@@ -39,7 +40,6 @@ btnGoogle.addEventListener("click", () => {
       // console.log(user);
 
       if (savedAccountType == "tenant") {
-        console.log(user);
         window.location.href = "./../client/index.html";
       } else {
         window.location.href = "./../landlord/index.html";
@@ -50,7 +50,7 @@ btnGoogle.addEventListener("click", () => {
       const errorMessage = error.message;
       const email = error.customData.email;
       const credential = GoogleAuthProvider.credentialFromError(error);
-      console.log(errorMessage);
+      alert(errorMessage);
     });
 });
 //facebook
@@ -60,6 +60,7 @@ btnFacebook.addEventListener("click", () => {
   signInWithPopup(auth, providerFacebook)
     .then((result) => {
       const user = result.user;
+      localStorage.setItem("loggedInUserId", user.uid);
       const credential = FacebookAuthProvider.credentialFromResult(result);
       const accessToken = credential.accessToken;
       // const user = JSON.stringify(result.user);

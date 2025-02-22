@@ -17,6 +17,8 @@ togglePassword.addEventListener("click", () => {
   }
 });
 
+// console.log(savedAccountType);
+
 //Firebase login
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
 import {
@@ -53,13 +55,16 @@ form.addEventListener("submit", (e) => {
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
   if (email && password && savedAccountType == "tenant") {
+    console.log(email, password);
     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
       alert("Successful ✔️");
       const user = userCredential.user;
       localStorage.setItem("loggedInUserId", user.uid);
       window.location.href = "./../client/index.html";
     });
-  } else if (email.value && password.value && savedAccountType == "landlord") {
+  } else if (email && password && savedAccountType == "landlord") {
+    console.log(email, password);
+
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         alert("Successful ✔️");
