@@ -28,6 +28,7 @@ body {
   font-size: 0.9rem;
   background-color: var(--background);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .header-section {
@@ -76,8 +77,8 @@ body {
   justify-content: space-between;
   width: 300px;
   padding: 5px 0;
-  padding-left: 20px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 5px;
   border-radius: 50px;
   background-color: var(--lighter-blue);
 }
@@ -119,7 +120,7 @@ body {
 }
 .panel-container {
   background-color: #ffffff;
-  height: 100vh;
+  min-height: 100vh;
   width: 180px;
   margin-right: 20px;
   padding: 15px 25px;
@@ -160,22 +161,6 @@ body {
   }
 }
 
-.living-room {
-  border-radius: 30px;
-  background-color: var(--brown);
-  width: 125px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  padding: 15px 3px;
-  padding-left: 5px;
-  margin: 0 15px;
-}
-.living-room p {
-  color: #ffffff;
-  padding-left: 16px;
-  font-size: 0.7rem;
-}
 .main-section {
   display: flex;
   /* flex-wrap: wrap; */
@@ -183,8 +168,13 @@ body {
   justify-content: center;
   width: 100%;
   padding: 10px;
+  margin: 0 20px;
+  overflow-x: scroll;
 }
-
+.toggle-nav {
+  display: flex;
+  gap: 10px;
+}
 .upload-container {
   display: flex;
   align-items: center;
@@ -193,7 +183,7 @@ body {
   padding-left: 10px;
   border-radius: 30px;
   background-color: var(--faded-brown);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--box-color);
   margin-bottom: 200px;
 }
@@ -202,13 +192,13 @@ body {
   margin-top: 3px;
 }
 .upload-btn {
-  width: 140px;
+  width: 120px;
   border-radius: 30px;
   border: none;
   height: 40px;
   padding: 10px;
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   background-color: var(--primary-color);
 }
 
@@ -340,4 +330,110 @@ td {
 
 .btn-logout:hover {
   background-color: var(--btn-hover);
+}
+
+@media screen and (max-width: 900px) {
+  .main-section {
+    gap: 5px;
+    margin: 0 5px;
+  }
+  .upload-container {
+    position: relative;
+  }
+  .center {
+    display: grid;
+    place-items: center;
+  }
+
+  .toggle-nav {
+    display: none;
+  }
+  .panel-container {
+    width: 70px;
+  }
+  .panel-group h4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .upload-container {
+    gap: 7px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding: 10px;
+    /* max-width: 90%; */
+  }
+  .title {
+    position: relative;
+  }
+  .add-tenant {
+    position: absolute;
+    right: 15px;
+    width: 90px;
+    border-radius: 30px;
+    border: none;
+    height: 30px;
+    padding: 10px;
+    color: white;
+    font-size: 0.7rem;
+    background-color: var(--primary-color);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btn-logout {
+    font-size: 0.65rem;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    width: 55px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+  }
+  .right-nav {
+    gap: 5px;
+  }
+  .header {
+    gap: 15px;
+  }
+  .upload-btn {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    height: 26px;
+    padding: 10px;
+    color: white;
+    font-size: 0.65rem;
+    background-color: var(--primary-color);
+  }
+  .add-tenant {
+    width: 90px;
+    border-radius: 30px;
+    border: none;
+    height: 30px;
+    padding: 10px;
+    color: white;
+    font-size: 0.7rem;
+    background-color: var(--primary-color);
+  }
+}
+@media screen and (max-width: 400px) {
+  .upload-btn {
+    position: absolute;
+    left: 0;
+    top: 105px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    height: 30px;
+    padding: 10px;
+    color: white;
+    font-size: 0.65rem;
+    background-color: var(--primary-color);
+  }
 }
