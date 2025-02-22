@@ -563,7 +563,7 @@ body {
   background-color: var(--text-white);
   border-radius: 20px;
   padding: 80px 25px 30px 60px;
-  height: 330px;
+  min-height: 330px;
   position: relative;
   font-size: 1rem;
 }

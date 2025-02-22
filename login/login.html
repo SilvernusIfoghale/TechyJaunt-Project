@@ -68,16 +68,18 @@
               </div>
             </div>
             <div class="action">
-              <button class="btn-signup" type="submit">Log in</button>
+              <button class="btn-signup" type="submit" id="login">
+                Log in
+              </button>
               <p class="text">Or Continue With</p>
               <div class="action-group">
-                <div class="with-btn">
+                <div class="with-btn google-sign-in">
                   <div class="img-container">
                     <img src="./../icons/icons8-google.png" alt="" />
                   </div>
                   <p>Google</p>
                 </div>
-                <div class="with-btn">
+                <div class="with-btn facebook-sign-in">
                   <div class="img-container">
                     <img src="./../icons/icons8-facebook.png" alt="" />
                   </div>
@@ -95,7 +97,7 @@
         </section>
       </div>
     </div>
-
-    <script src="login.js"></script>
+    <script src="./../firebaseauth.js" type="module"></script>
+    <script src="login.js" type="module"></script>
   </body>
 </html>

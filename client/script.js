@@ -29,7 +29,11 @@ import {
   onAuthStateChanged,
   signOut,
 } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
-
+import {
+  getFirestore,
+  doc,
+  getDoc,
+} from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 const firebaseConfig = {
   apiKey: "AIzaSyBazHNvBbgW1pVf00R2QcUBocECxA9d15o",
   authDomain: "nestify-e5ad9.firebaseapp.com",
@@ -43,20 +47,43 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
+const db = getFirestore();
 
 onAuthStateChanged(auth, (user) => {
+  // const loggedInUserId = localStorage.getItem("loggedInUserId");
   if (user) {
     const uid = user.uid;
     const userName = user?.displayName;
     const userEmail = user?.email;
     const userProfilePicture = user?.photoURL;
-    console.log(userProfilePicture);
+    // console.log(userProfilePicture);
 
     document.getElementById("userName").textContent = userName;
     if (userProfilePicture) {
       document.getElementById("userProfilePicture").src = userProfilePicture;
     }
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const loggedInUserId = localStorage.getItem("loggedInUserId");
+  if (loggedInUserId) {
+    const docRef = doc(db, "users", loggedInUserId);
+    getDoc(docRef)
+      .then((docSnap) => {
+        if (docSnap.exists()) {
+          const userData = docSnap.data();
+          console.log(userData);
+          document.getElementById("userName").textContent = userData.firstName;
+        } else {
+          alert("No document found matching id");
+        }
+      })
+      .catch((error) => {
+        alert("Logging out,..");
+      });
   } else {
+    console.log("User id not found.");
     window.location.href = "./../index.html";
   }
 });
@@ -64,11 +91,12 @@ onAuthStateChanged(auth, (user) => {
 // sign out
 
 document.querySelector(".btn-logout").addEventListener("click", () => {
+  localStorage.removeItem("loggedInUserId");
   signOut(auth)
     .then(() => {
       window.location.href = "./../index.html";
     })
     .catch((error) => {
-      console.log("Error", error.message);
+      alert("Error Signin Out");
     });
 });
