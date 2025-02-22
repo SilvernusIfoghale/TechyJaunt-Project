@@ -76,7 +76,9 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 300px;
-  padding: 5px 20px;
+  padding: 5px 0;
+  padding-left: 15px;
+  padding-right: 5px;
   border-radius: 50px;
   background-color: var(--lighter-blue);
 }
@@ -120,13 +122,26 @@ body {
   gap: 10px;
 }
 
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+.toggle-nav {
+  display: flex;
+  gap: 10px;
+}
+
 /* panel section  */
 .main {
   display: flex;
 }
 .panel-container {
   background-color: #ffffff;
-  height: 100vh;
+  min-height: 100vh;
   width: 180px;
   margin-right: 20px;
   padding: 15px 25px;
@@ -179,7 +194,7 @@ body {
 
 .left .img-container {
   max-width: 700px;
-  min-width: 350px;
+  min-width: 240px;
 }
 .left .img-container img {
   width: 100%;
@@ -188,7 +203,7 @@ body {
 }
 
 .right {
-  max-width: 80%;
+  max-width: 70%;
 }
 .right h2 {
   margin-right: 20px;
@@ -202,7 +217,7 @@ body {
   color: var(--box-color);
 }
 .text-gap {
-  line-height: 2.9rem;
+  line-height: 2rem;
 }
 .text-bold {
   font-weight: 600;
@@ -322,7 +337,7 @@ input[type="tel"] {
 .dark-background {
   position: absolute;
   width: 100%;
-  min-height: 110vh;
+  min-height: 140vh;
   /* opacity: 10%; */
   background-color: rgba(77, 76, 76, 0.7);
 }
@@ -350,4 +365,73 @@ input[type="tel"] {
 
 .btn-logout:hover {
   background-color: var(--btn-hover);
+}
+
+@media screen and (max-width: 855px) {
+  .toggle-nav {
+    display: none;
+  }
+  .panel-container {
+    width: 50px;
+    margin-right: 0;
+    padding: 15px 10px;
+  }
+  .panel-group h4 {
+    display: none;
+  }
+  .right p {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .apartment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btn-logout {
+    font-size: 0.65rem;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    width: 55px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+  }
+  .right-nav {
+    gap: 5px;
+  }
+  .header {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .btn-group {
+    /* display: flex; */
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .right p {
+    font-size: 0.6rem;
+  }
+}
+
+/* modal  */
+@media screen and (max-width: 430px) {
+  .modal {
+    width: 300px;
+
+    font-size: 0.7rem;
+    padding-top: 40px;
+  }
 }
