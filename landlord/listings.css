@@ -77,8 +77,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
-  padding: 5px 20px;
+  width: 250px;
+  padding: 5px 0;
+  padding-left: 15px;
+  padding-right: 5px;
   border-radius: 50px;
   background-color: var(--lighter-blue);
 }
@@ -121,14 +123,25 @@ body {
   align-items: center;
   gap: 10px;
 }
-
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+.toggle-nav {
+  display: flex;
+  gap: 10px;
+}
 /* panel section  */
 .main {
   display: flex;
 }
 .panel-container {
   background-color: #ffffff;
-  height: 100vh;
+  min-height: 100vh;
   width: 180px;
   margin-right: 20px;
   padding: 15px 25px;
@@ -169,22 +182,6 @@ body {
   }
 }
 
-.living-room {
-  border-radius: 30px;
-  background-color: var(--brown);
-  width: 125px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  padding: 15px 3px;
-  padding-left: 5px;
-  margin: 0 15px;
-}
-.living-room p {
-  color: #ffffff;
-  padding-left: 16px;
-  font-size: 0.7rem;
-}
 .main-section {
   display: flex;
   /* flex-wrap: wrap; */
@@ -337,4 +334,69 @@ body {
 
 .btn-logout:hover {
   background-color: var(--btn-hover);
+}
+@media screen and (max-width: 855px) {
+  .toggle-nav {
+    display: none;
+  }
+  .panel-container {
+    width: 50px;
+    margin-right: 0;
+    padding: 15px 10px;
+  }
+  .panel-group h4 {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn-logout {
+    font-size: 0.65rem;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    width: 55px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+  }
+  .right-nav {
+    gap: 5px;
+  }
+  .header {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .property-detail {
+    max-height: 640px;
+    max-width: 280px;
+
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  .properties-form {
+    max-height: 550px;
+    max-width: 280px;
+
+    margin-bottom: 30px;
+  }
+  .main-section {
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .property-detail {
+    max-height: 640px;
+    min-width: 120px;
+    width: 90%;
+    padding: 10px;
+  }
+  .properties-form {
+    max-height: 550px;
+    max-width: 280px;
+    width: 90%;
+
+    margin-bottom: 30px;
+  }
 }
