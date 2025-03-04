@@ -131,10 +131,10 @@
       <div class="main-section">
         <!-- first form  -->
         <div class="property-detail">
-          <form>
+          <form id="form">
             <div class="group-item">
               <label for="type">Type</label>
-              <select name="type" id="type">
+              <select name="type" id="type" required>
                 <option value="" selected disabled></option>
                 <option value="Flat">Flat</option>
                 <option value="Flat">2-Bedroom House</option>
@@ -153,7 +153,7 @@
                 placeholder="Write about property"
               ></textarea>
             </div>
-            <div class="wrapper-upload">
+            <!-- <div class="wrapper-upload">
               <div><img src="./icons/image-up.svg" alt="avatar-icon" /></div>
               <div><p class="text">Drop your files here</p></div>
               <div class="file-upload">
@@ -162,11 +162,28 @@
                 </label>
                 <input type="file" id="file-input" class="file-input" />
               </div>
+            </div> -->
+            <div class="container">
+              <div id="drop-area">
+                <div><img src="./icons/image-up.svg" alt="avatar-icon" /></div>
+                <br />
+                <p>Drag & drop images here or click to select files</p>
+                <br />
+                <input
+                  type="file"
+                  id="fileElem"
+                  multiple
+                  accept="image/*"
+                  style="display: none"
+                />
+                <label for="fileElem" class="button">Select Files</label>
+              </div>
             </div>
-            <div>
+            <div class="img-area-container">
               <p class="text">You can add upto 10 images</p>
               <div class="image-area">
                 <!-- image area  -->
+                <div id="gallery"></div>
               </div>
             </div>
           </form>
@@ -174,7 +191,7 @@
 
         <!-- second form  -->
         <div class="properties-form">
-          <form>
+          <form id="formProperty">
             <div class="group-item">
               <label for="country">Country</label>
               <input type="text" placeholder="Enter property country" />
@@ -207,5 +224,6 @@
       </div>
     </div>
     <script src="script.js" type="module"></script>
+    <script src="listings.js" type="module"></script>
   </body>
 </html>
