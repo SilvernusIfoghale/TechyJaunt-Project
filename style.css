@@ -613,7 +613,13 @@ body {
   color: var(--text-white);
   margin: 25px 0;
 }
-
+.btn-demo {
+  cursor: pointer;
+  transition: 1s all ease-in-out;
+}
+.btn-demo:hover {
+  transform: scale(105%);
+}
 /* Footer section start here  */
 .footer-section {
   margin-top: 30px;
